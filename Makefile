@@ -19,7 +19,7 @@ LDSHARED=$(CC) -shared
 all: bcast
 
 bcast : bcast.c bcast-tar.c _inst/lib/libarchive.a
-	$(CC) -I_inst/include -L_inst/lib -g -O0 -o bcast bcast.c bcast-tar.c -larchive -lz
+	$(CC) -I_inst/include -L_inst/lib -g -O0 -o bcast bcast.c bcast-tar.c -larchive -lz -liconv
 
 libarchive-3.1.2.tar.gz:
 	wget http://www.libarchive.org/downloads/libarchive-3.1.2.tar.gz

@@ -34,4 +34,4 @@ _inst/lib/libarchive.a: libarchive-3.1.2/configure
     make install DESTDIR=$(PWD)/_inst)
 
 clean:
-	rm python-mpi bcast tar
+	rm -f python-mpi bcast tar
